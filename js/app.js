@@ -18,10 +18,10 @@ function setMap() {
 		title: 'LIG'
 	});
 
-	// infobox 用のdivエレメントを生成
+	// infobox用のDOMを生成
 	var infoboxContent = '<div class="gmap-info-window-inner"><p class="gmap-info-window-title">代々木ゼミナール本部校</p><p class="gmap-info-window-address">〒151-8559 東京都渋谷区代々木2-25-7</p></div>';
 
-	// infobox のオプション
+	// infoboxのオプション
 	var infoboxOptions = {
 		content: infoboxContent,  //表示するHTML
 		disableAutoPan: false,
@@ -35,11 +35,11 @@ function setMap() {
 		closeBoxURL: '../images/close.png', // 閉じるボタンのイメージ
 		infoBoxClearance: new google.maps.Size(1, 1)
 	};
-	// infobox を生成して表示
+	// infoboxを生成して表示
 	var infobox = new InfoBox(infoboxOptions);
 	infobox.open(map, targetMarker);
 
-	// マーカーがクリックされた時に情報ウィンドウ表示
+	// マーカーがクリックされた時にinfoboxを表示
 	targetMarker.addListener('click', function() {
 		infobox.open(map, targetMarker);
 	});
