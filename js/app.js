@@ -37,7 +37,7 @@ function setMap() {
 	};
 	// infobox を生成して表示
 	var infobox = new InfoBox(infoboxOptions);
-	infobox.open(map, this);
+	infobox.open(map, targetMarker);
 
 	// マーカーがクリックされた時に情報ウィンドウ表示
 	targetMarker.addListener('click', function() {
